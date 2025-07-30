@@ -1,6 +1,6 @@
 # Automated Invoice Compliance Validation using Multi-LLM Orchestration and RAG Based Pipeline
 
-> A multimodal, schema-enforced Proof of Concept system designed to intelligently validate invoice compliance using orchestrated large language models. This POC demonstrates how invoice fraud, policy violations, and document inconsistencies can be identified and explained clearly, both for machine integration and human consumption, across documents of diverse formats and quality.
+> A multimodal, schema-enforced Proof of Concept system designed to intelligently validate invoice compliance using orchestrated large language models. Inspired by principles from the Model Context Protocol (MCP), this POC explores how structured handoffs between LLMs can enable clear, traceable reasoning across stages. This POC demonstrates how invoice fraud, policy violations, and document inconsistencies can be identified and explained clearly, both for machine integration and human understanding, across documents of diverse formats and quality.
 
 
 ## Problem Statement
