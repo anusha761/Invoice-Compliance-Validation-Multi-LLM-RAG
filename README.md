@@ -28,32 +28,15 @@ Key Features:
 
 ---
 
-## Architecture Overview
+## Solution Overview
 
-```
-[Invoice Image]
-        ↓
-[Stage 1: GPT-4o (Multimodal Analysis)]
-        ↓
-• Extracts invoice data
-• Identifies potential errors
-        ↓
-[ChromaDB Vector Store]
-• Retrieves top-2 relevant policy clauses
-        ↓
-[Stage 2: GPT-4o-mini (Policy-Aware Reasoning)]
-        ↓
-• Determines policy violations
-• Suggests actionable next steps
-        ↓
-[Structured JSON Output]
-• validation_summary
-• risk_assessment with policy references
-• suggestive_action
-        ↓
-Deliver in human readable format
-```
+1. Multimodal Invoice Analysis (Stage 1 – GPT-4o) : The pipeline begins with an invoice image. GPT-4o, leveraging its multimodal capabilities, extracts key fields such as vendor name, bank details, tax info, invoice amount, and line items. It also flags potential issues—like missing fields, unclear images, or abnormal quantities. The model's output is strictly formatted using OpenAI’s function-calling schema, ensuring the results conform to a predefined structure. This schema-enforced output allows for consistent downstream processing and reliable integration with subsequent reasoning steps and system components.
 
+2. Policy Retrieval (ChromaDB + Sentence Transformers): Identified error messages are used to query a vector store built with ChromaDB. The system retrieves the top two most relevant policy clauses from the stored compliance documents.
+
+3. Policy-Aware Reasoning (Stage 2 – GPT-4o-mini): The original LLM output, along with the retrieved policy clauses, is passed to a second LLM (GPT-4o-mini). It evaluates the issues in context and determines whether they represent actual policy violations. It also recommends appropriate next steps based on the policy.
+
+4. Structured and Human-Readable Output: The result is returned as a structured schema enforced JSON object containing - validation_summary, risk_assessment (with references to relevant policies), suggestive_action. This output is machine-readable for integration into enterprise systems, but also formatted into clear, plain English summaries—easily understandable by users such as compliance officers, finance staff, or auditors.
 
 ## Design Philosophy
 
