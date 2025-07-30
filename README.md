@@ -55,6 +55,15 @@ Deliver in human readable format
 ```
 
 
+## Design Philosophy
+
+This project was inspired by the Model Context Protocol (MCP) — a framework that encourages structured, modular interactions between language models. While this implementation is exploratory and intentionally lightweight, it adopts the core spirit of MCP to enable multi-LLM orchestration using OpenAI’s function calling schema.
+
+In this prototype, GPT-4o first produces a structured JSON output based on multimodal invoice analysis. This output is then programmatically enriched and passed as input to a second model (GPT-4o-mini) for context-aware policy reasoning. Enforcing a consistent schema between these stages brings clarity, traceability, and alignment to the LLM pipeline.
+
+This approach represents an early-stage, hands-on attempt to explore how ideas from MCP can be applied in practical, real-world use cases. It is presented as a rapid prototype and proof of concept, with full acknowledgment that MCP is a broader and more sophisticated paradigm still evolving in the research and enterprise AI community.
+
+
 ## Technology Stack
 
 | Component              | Technology Used                         |
