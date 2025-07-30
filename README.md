@@ -64,17 +64,40 @@ This approach represents an early-stage, hands-on attempt to explore how ideas f
 While GPT-4o provides basic multimodal capabilities for extracting text from images, integrating a dedicated OCR engine such as Google Document AI or AWS Textract would improve reliability on low-quality or complex invoice formats. This would complement the existing pipeline and enhance consistency in production environments.
 
 
+## Output Screenshots
+
+#### Invoice 1
+
+<img width="690" height="763" alt="inv1" src="https://github.com/user-attachments/assets/ad03ccc1-949f-43a7-8323-d6d7bbdc7b15" />
+
+#### Report
+
+<img width="1149" height="166" alt="inv1-resp" src="https://github.com/user-attachments/assets/1d56d6cc-5e8f-455b-9a88-c29fcf7e3afe" />
+
+#### Invoice 2
+
+<img width="657" height="851" alt="inv2" src="https://github.com/user-attachments/assets/33cdfa78-9bef-48e3-b4b8-289ec538a1d8" />
+
+#### Report
+
+<img width="1159" height="283" alt="inv2-resp" src="https://github.com/user-attachments/assets/819d8dae-fd5c-4657-80bf-e641ec1b43b2" />
+
+#### Invoice 3
+
+<img width="676" height="866" alt="inv3" src="https://github.com/user-attachments/assets/f9f897eb-c52e-4d50-995d-fc2359040b47" />
+
+#### Report
+
+<img width="259" height="84" alt="inv3-resp" src="https://github.com/user-attachments/assets/30f9bcf8-0345-423f-8f08-23bd6728fa4e" />
+
+
 ## Library Versions
 
-- openai==1.80.0  
-- chromadb==1.0.13  
-- sentence-transformers==3.4.1  
+- openai==1.97.1  
+- chromadb==1.0.15  
+- transformers==4.53.3  
 - pandas==2.2.2  
-- langchain==0.3.25  
-- langchain-core==0.3.63  
-- langchain-community==0.3.25  
-- langchain-chroma==0.2.4  
-- python==3.10+
+- langchain==0.3.27
 
 
 ## Contact
